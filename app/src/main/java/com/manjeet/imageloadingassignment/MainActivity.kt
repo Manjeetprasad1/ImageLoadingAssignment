@@ -39,8 +39,6 @@ class MainActivity : AppCompatActivity() {
 
         ImageLoader.initialize(this)
         if (isInternetAvailable()){
-            val bitmapList = ImageLoader.loadBitmapsFromDisk()
-            Log.d("AppCompatActivityaa", "onCreate: ${bitmapList.size}")
             binding.pgLoader.visibility = View.VISIBLE
             mImageLoadViewModel.callMediaCoverageApi()
             mImageLoadViewModel.getMediaCoverageData().observe(this){data->
