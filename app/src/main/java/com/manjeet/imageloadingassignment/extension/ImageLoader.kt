@@ -18,12 +18,10 @@ import java.net.URL
 import kotlin.concurrent.thread
 
 object ImageLoader {
-
     // Memory cache to store Bitmaps
     private val memoryCache = mutableMapOf<String, Bitmap?>()
 
-    private lateinit var appContext: Context // Declare application context variable
-
+    private lateinit var appContext: Context
     fun initialize(context: Context) {
         appContext = context.applicationContext // Initialize application context
     }
